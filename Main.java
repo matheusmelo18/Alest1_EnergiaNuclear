@@ -1,18 +1,17 @@
-import java.io.IOException;
-
 public class Main {
+    public static void main(String[] args) {
+        Subestacao[] subestacoes = {
+                new Subestacao("Planalto"),
+                new Subestacao("Aurora"),
+                new Subestacao("Litoral"),
+                new Subestacao("Horizonte"),
+                new Subestacao("Progresso")
+        };
 
-    public static void main(String[] args) throws IOException {
+        LeitorCSV leitorCSV = new LeitorCSV(subestacoes);
+        leitorCSV.lerArquivo("consumos_20.csv");
 
-        SubEstacao estacao = new SubEstacao();
-
-        try{
-
-        }catch (IOException e){
-            e.printStackTrace();
-        }
-
-
+        Relatorio relatorio = new Relatorio(subestacoes);
+        relatorio.gerarRelatorio("resultados.txt");
     }
-
 }

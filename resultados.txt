@@ -1,0 +1,18 @@
+Matriz de Consumo por Subestação
+Jan Fev Mar Abr Mai Jun Jul Ago Set Out Nov Dez
+Planalto 0 0 0 0 0 0 0 0 0 0 0 0 
+Aurora 0 0 0 0 0 0 0 0 0 0 0 0 
+Litoral 0 0 0 0 0 0 0 0 0 0 0 0 
+Horizonte 0 0 0 0 0 0 0 0 0 0 0 0 
+Progresso 0 0 0 0 0 0 0 0 0 0 0 0 
+
+Subestação com maior consumo mensal:  - 
+Subestação com menor consumo mensal:  - 
+Total geral de consumo: 0
+Média de consumo mensal por subestação
+Planalto: 0.0
+Aurora: 0.0
+Litoral: 0.0
+Horizonte: 0.0
+Progresso: 0.0
+
