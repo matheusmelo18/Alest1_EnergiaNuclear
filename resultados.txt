@@ -1,18 +1,18 @@
 Matriz de Consumo por Subestação
 Jan Fev Mar Abr Mai Jun Jul Ago Set Out Nov Dez
-Planalto 0 0 0 0 0 0 0 0 0 0 0 0 
-Aurora 0 0 0 0 0 0 0 0 0 0 0 0 
-Litoral 0 0 0 0 0 0 0 0 0 0 0 0 
-Horizonte 0 0 0 0 0 0 0 0 0 0 0 0 
-Progresso 0 0 0 0 0 0 0 0 0 0 0 0 
+Planalto 0 0 0 0 141 1413 2531 2033 0 0 1892 0 
+Aurora 0 1440 0 0 70 0 0 0 0 0 1015 0 
+Litoral 0 0 0 2384 0 0 0 0 0 216 0 0 
+Horizonte 0 0 947 0 291 0 0 63 0 0 0 0 
+Progresso 0 0 1347 0 0 0 0 696 0 0 0 0 
 
-Subestação com maior consumo mensal:  - 
-Subestação com menor consumo mensal:  - 
-Total geral de consumo: 0
+Subestação com maior consumo mensal: Planalto - Jul
+Subestação com menor consumo mensal: Horizonte - Ago
+Total geral de consumo: 16479
 Média de consumo mensal por subestação
-Planalto: 0.0
-Aurora: 0.0
-Litoral: 0.0
-Horizonte: 0.0
-Progresso: 0.0
+Planalto: 667.5
+Aurora: 210.41666666666666
+Litoral: 216.66666666666666
+Horizonte: 108.41666666666667
+Progresso: 170.25
 

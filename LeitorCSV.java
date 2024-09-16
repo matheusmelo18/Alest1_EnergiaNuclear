@@ -2,6 +2,7 @@ import java.io.*;
 
 public class LeitorCSV {
     private Subestacao[] subestacoes;
+    private final String[] MESES = {"Janeiro", "Fevereiro", "Marco", "Abril", "Maio", "Junho", "Julho", "Agosto", "Setembro", "Outubro", "Novembro", "Dezembro"};
 
     public LeitorCSV(Subestacao[] subestacoes) {
         this.subestacoes = subestacoes;
@@ -26,19 +27,12 @@ public class LeitorCSV {
                     continue;
                 }
 
-                // Garante que partes[0] possui o formato esperado (algo como "01 Dezembro")
-                String[] mesPartes = partes[0].split(" ");
-                if (mesPartes.length < 2) {
-                    System.out.println("Formato de mês inválido: " + partes[0]);
-                    continue;
-                }
-
-                String mes = mesPartes[1];  // Pega o nome do mês (ex: "Dezembro")
-                String subestacaoNome = partes[1];
+                String mes = partes[0].trim(); // Nome do mês
+                String subestacaoNome = partes[1].trim();
                 int consumo;
 
                 try {
-                    consumo = Integer.parseInt(partes[2]);
+                    consumo = Integer.parseInt(partes[2].trim());
                 } catch (NumberFormatException e) {
                     System.out.println("Valor de consumo inválido na linha: " + linha);
                     continue;
@@ -49,17 +43,24 @@ public class LeitorCSV {
 
                 if (mesIndex != -1 && subestacao != null) {
                     subestacao.adicionarConsumo(mesIndex, consumo);
+                } else {
+                    if (mesIndex == -1) {
+                        System.out.println("Mês inválido: " + mes);
+                    }
+                    if (subestacao == null) {
+                        System.out.println("Subestação não encontrada: " + subestacaoNome);
+                    }
                 }
             }
         } catch (IOException e) {
+            System.err.println("Erro ao ler o arquivo: " + e.getMessage());
             e.printStackTrace();
         }
     }
 
     private int getMesIndex(String mes) {
-        String[] MESES = {"Jan", "Fev", "Mar", "Abr", "Mai", "Jun", "Jul", "Ago", "Set", "Out", "Nov", "Dez"};
         for (int i = 0; i < MESES.length; i++) {
-            if (MESES[i].startsWith(mes.substring(0, 3))) { // Corrige para pegar os três primeiros caracteres do mês
+            if (MESES[i].equalsIgnoreCase(mes)) {
                 return i;
             }
         }
@@ -68,7 +69,7 @@ public class LeitorCSV {
 
     private Subestacao getSubestacao(String nome) {
         for (Subestacao s : subestacoes) {
-            if (s.getNome().equals(nome)) {
+            if (s.getNome().equalsIgnoreCase(nome)) {
                 return s;
             }
         }
