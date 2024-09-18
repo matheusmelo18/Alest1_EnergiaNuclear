@@ -1,10 +1,10 @@
 Matriz de Consumo por Subestação
-Jan Fev Mar Abr Mai Jun Jul Ago Set Out Nov Dez
-Planalto 0 0 0 0 141 1413 2531 2033 0 0 1892 0 
-Aurora 0 1440 0 0 70 0 0 0 0 0 1015 0 
-Litoral 0 0 0 2384 0 0 0 0 0 216 0 0 
-Horizonte 0 0 947 0 291 0 0 63 0 0 0 0 
-Progresso 0 0 1347 0 0 0 0 696 0 0 0 0 
+meses 		jan		Fev		Mar		Abr		Mai		Jun		Jul		Ago		Set		Out		Nov		Dez
+Planalto	0		0		0		0		141		1413	2531	2033	0		0		1892	0		
+Aurora		0		1440	0		0		70		0		0		0		0		0		1015	0		
+Litoral		0		0		0		2384	0		0		0		0		0		216		0		0		
+Horizonte	0		0		947		0		291		0		0		63		0		0		0		0		
+Progresso	0		0		1347	0		0		0		0		696		0		0		0		0		
 
 Subestação com maior consumo mensal: Planalto - Jul
 Subestação com menor consumo mensal: Horizonte - Ago

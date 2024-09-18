@@ -32,13 +32,18 @@ public class Relatorio {
 
     private void gerarMatrizConsumo(BufferedWriter writer) throws IOException {
         String[] MESES = {"Jan", "Fev", "Mar", "Abr", "Mai", "Jun", "Jul", "Ago", "Set", "Out", "Nov", "Dez"};
-        writer.write("Jan Fev Mar Abr Mai Jun Jul Ago Set Out Nov Dez");
+        writer.write( "meses " + " jan Fev Mar Abr Mai Jun Jul Ago Set Out Nov Dez".replaceAll("\s", "\t\t"));
         writer.newLine();
 
         for (Subestacao s : subestacoes) {
-            writer.write(s.getNome() + " ");
+            writer.write(s.getNome());
+            if(s.getNome().length() < 8)
+                writer.write("\t");
+            writer.write("\t");
             for (int consumo : s.getConsumosMensais()) {
-                writer.write(consumo + " ");
+                writer.write(consumo + "\t");
+                if(consumo < 999)
+                    writer.write("\t");
             }
             writer.newLine();
         }
